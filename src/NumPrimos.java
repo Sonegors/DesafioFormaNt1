@@ -1,4 +1,3 @@
-package app;
 
 public class NumPrimos {
     public static void main(String[] args) {

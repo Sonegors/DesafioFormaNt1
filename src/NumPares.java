@@ -1,4 +1,3 @@
-package app;
 
 public class NumPares {
     public static void main(String[] args) {
