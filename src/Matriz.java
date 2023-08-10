@@ -1,11 +1,11 @@
 
 import java.util.Scanner;
 
-public class Matriz{
+public class Matriz {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite um número inteiro para gerar a matriz identidade: ");
+        System.out.print("Digite o valor do número para gerar a matriz identidade: ");
         int numero = scanner.nextInt();
 
         int[][] matriz = gerarMatrizIdentidade(numero);
@@ -14,15 +14,15 @@ public class Matriz{
         scanner.close();
     }
 
-    public static int[][] gerarMatrizIdentidade(int numero) {
-        int[][] matriz = new int[numero][numero];
+    public static int[][] gerarMatrizIdentidade(int tamanho) {
+        int[][] matriz = new int[tamanho][tamanho];
 
-        for (int i = 0; i < numero; i++) {
-            for (int j = 0; j < numero; j++) {
-                if (i == j) {
-                    matriz[i][j] = 1;
+        for (int linha = 0; linha < tamanho; linha++) {
+            for (int coluna = 0; coluna < tamanho; coluna++) {
+                if (linha == coluna) {
+                    matriz[linha][coluna] = 1;
                 } else {
-                    matriz[i][j] = 0;
+                    matriz[linha][coluna] = 0;
                 }
             }
         }
@@ -31,9 +31,9 @@ public class Matriz{
     }
 
     public static void imprimirMatriz(int[][] matriz) {
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.print(matriz[i][j] + "    ");
+        for (int linha = 0; linha < matriz.length; linha++) {
+            for (int coluna = 0; coluna < matriz[linha].length; coluna++) {
+                System.out.print(matriz[linha][coluna] + "    ");
             }
             System.out.println();
         }
